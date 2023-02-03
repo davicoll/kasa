@@ -5,22 +5,25 @@ import Logement from "./pages/Logement";
 import Apropos from "./pages/Apropos";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Error from "./pages/Error";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function App() {
   const [logements, setLogements] = useState([]);
 
+  //Setstate logements
   useEffect(() => {
     const getLogements = async () => {
-      const logementsFromServer = await fetchLoge();
+      const logementsFromServer = await fetchLoges();
       setLogements(logementsFromServer);
     };
 
     getLogements();
   }, []);
 
-  const fetchLoge = async () => {
+  //Fetch all logements
+  const fetchLoges = async () => {
     const res = await fetch("data.json", {
       headers: {
         Accept: "application/json",
@@ -39,9 +42,11 @@ function App() {
         <Route path="/" element={<Home logements={logements} />} />
         <Route path="/apropos" element={<Apropos />} />
         <Route
-          path="/logement/*"
+          exact
+          path="/logement/:id"
           element={<Logement logements={logements} />}
         />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </Router>

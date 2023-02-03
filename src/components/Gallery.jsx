@@ -1,17 +1,10 @@
-import { Link } from "react-router-dom";
-
-const cover = "provisorio";
+import Card from "./Card";
 
 const Gallery = ({ logements }) => {
   return (
     <div>
       {logements.map((logement) => (
-        <Link to="/logement">
-          <div key={logement.id}>
-            <img src={logement.cover} alt="interieur de ce logement" />
-            <p>{logement.title}</p>
-          </div>
-        </Link>
+        <Card key={logement.id} logement={logement} />
       ))}
     </div>
   );
