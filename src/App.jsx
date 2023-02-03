@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./App.css";
 import Home from "./pages/Home";
 import Logement from "./pages/Logement";
 import Apropos from "./pages/Apropos";
