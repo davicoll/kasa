@@ -9,8 +9,16 @@
   font-family: "montserrat";
   font-weight: 500;
   color: #ff6060;
-  font-size: 24px;
   max-width: 55%;
+}
+.loge-title-text p {
+  margin: 0px 0px 20px 0px;
+  font-size: 18px;
+}
+.loge-title-text h2 {
+  margin-bottom: 0px;
+  font-size: 36px;
+  font-weight: 500;
 }
 .loge-host-info {
   display: flex;
@@ -22,7 +30,7 @@
   font-weight: 500;
   color: #ff6060;
   font-size: 24px;
-  max-width: 100px;
+  max-width: 120px;
   text-align: center;
 }
 .loge-host-photo img {

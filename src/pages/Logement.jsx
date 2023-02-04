@@ -19,7 +19,33 @@ const Logement = ({ logements }) => {
     displayLoge();
   }, []);
 
-  console.log(logement);
+  // const [logement, setLogement] = useState([]);
+  // const myUrl = useParams();
+
+  // //Setstate logements
+  // useEffect(() => {
+  //   const getLogement = async () => {
+  //     const logementFromServer = await fetchLoge();
+  //     const logement = logementFromServer.find(
+  //       (logement) => logement.id === myUrl.id
+  //     );
+  //     setLogement(logement);
+  //   };
+
+  //   getLogement();
+  // }, []);
+
+  // //Fetch one logement
+  // const fetchLoge = async () => {
+  //   const res = await fetch("../data.json", {
+  //     headers: {
+  //       Accept: "application/json",
+  //       "Content-Type": "application/json",
+  //     },
+  //   });
+  //   const data = await res.json();
+  //   return data;
+  // };
 
   return (
     <div key={logement.id}>
@@ -37,7 +63,9 @@ const Logement = ({ logements }) => {
         </div>
       </div>
       <div>
-        <div>{/* <Tag logement={logement} /> */}</div>
+        <div>
+          <Tag logement={logement} />
+        </div>
       </div>
       <Toggle logement={logement} />
     </div>

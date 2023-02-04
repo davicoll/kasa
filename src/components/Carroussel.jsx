@@ -7,7 +7,7 @@ const Carroussel = ({ logement }) => {
       {logement.pictures ? (
         <img
           className="carroussel-img"
-          src={logement.pictures[1]}
+          src={logement.pictures[0]}
           alt="interieur du logement"
         />
       ) : null}
