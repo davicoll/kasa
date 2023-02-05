@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 function App() {
+  //logements state
   const [logements, setLogements] = useState([]);
 
   //Setstate logements

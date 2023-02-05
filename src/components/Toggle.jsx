@@ -5,7 +5,7 @@ const Toggle = ({ logement }) => {
   return (
     <div>
       <div className="toggle-cont">
-        <div className="toggle">
+        <div className="toggle s">
           <div className="toggle-title">
             <p>Description</p>
             <div className="toggle-arrow-cont">
@@ -16,7 +16,7 @@ const Toggle = ({ logement }) => {
             <p className="toggle-text">{logement && logement.description}</p>
           </div>
         </div>
-        <div className="toggle">
+        <div className="toggle s">
           <div className="toggle-title">
             <p>Équipement</p>
             <div className="toggle-arrow-cont">

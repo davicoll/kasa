@@ -6,6 +6,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  gap: 2%;
   row-gap: 30%; /*FIX THIS*/
   background-color: #f6f6f6;
   border-radius: 10px;
