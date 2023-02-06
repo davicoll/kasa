@@ -1,12 +1,43 @@
 .carroussel {
+  position: relative;
   width: 100%;
   object-fit: cover;
   height: 400px;
   border-radius: 25px;
+  z-index: 1;
 }
 .carroussel-img {
   width: 100%;
   object-fit: cover;
   height: 400px;
   border-radius: 25px;
+}
+.arrow {
+  position: absolute;
+  border: solid white;
+  border-width: 0px 7px 7px 0px;
+  display: inline-block;
+  padding: 20px;
+  z-index: 2;
+  top: 45%;
+}
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  left: 2%;
+}
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  right: 2%;
+}
+.counting {
+  position: absolute;
+  /* font-family: "montserrat"; */
+  font-weight: 500;
+  font-size: 24px;
+  color: white;
+  z-index: 3;
+  left: 50%;
+  bottom: 3%;
 }

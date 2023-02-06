@@ -2,27 +2,27 @@
 
 .container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 40px;
-}
-.tags-cont {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  gap: 1%;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.tags {
-  font-size: 15px;
-  font-weight: 500;
+.loge-host-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.loge-host-name {
   font-family: "montserrat";
-  color: white;
-  background-color: #ff6060;
-  border-radius: 10px;
-  padding: 5px 20px;
+  font-weight: 500;
+  color: #ff6060;
+  font-size: 24px;
+  max-width: 120px;
   text-align: center;
+}
+.loge-host-photo img {
+  object-fit: cover;
+  width: 64px;
+  border-radius: 50%;
 }
 .rating {
   display: flex;

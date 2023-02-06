@@ -9,6 +9,8 @@ const Logement = ({ logements }) => {
   const [logement, setLogement] = useState([]);
   const myUrl = useParams();
 
+  const tags = logement.tags;
+
   useEffect(() => {
     const logementOne = logements.find((logement) => logement.id === myUrl.id);
     const displayLoge = async () => {
@@ -22,26 +24,50 @@ const Logement = ({ logements }) => {
   return (
     <div key={logement.id}>
       <Carroussel logement={logement} />
-      <div className="loge-title-cont">
-        <div className="loge-title-text">
-          <h2>{logement.title}</h2>
-          <p>{logement.location}</p>
-        </div>
-        <div className="loge-host-info">
-          <div className="loge-host-name">{logement?.host?.name}</div>
-          <div className="loge-host-photo">
-            <img src={logement?.host?.picture} alt="host's face" />
+      <div className="loge-info-cont">
+        <div className="loge-title-cont">
+          <div className="loge-title-text">
+            <h2>{logement.title}</h2>
+            <p>{logement.location}</p>
+          </div>
+          <div className="tags-cont">
+            {tags &&
+              tags.map((tag, i) => (
+                <div className="tags" key={i}>
+                  {tag}
+                </div>
+              ))}
           </div>
         </div>
-      </div>
-      <div>
-        <div>
-          <Tag logement={logement} />
-        </div>
+        <Tag logement={logement} />
       </div>
       <Toggle logement={logement} />
     </div>
   );
+
+  // return (
+  //   <div key={logement.id}>
+  //     <Carroussel logement={logement} />
+  //     <div className="loge-title-cont">
+  //       <div className="loge-title-text">
+  //         <h2>{logement.title}</h2>
+  //         <p>{logement.location}</p>
+  //       </div>
+  //       <div className="loge-host-info">
+  //         <div className="loge-host-name">{logement?.host?.name}</div>
+  //         <div className="loge-host-photo">
+  //           <img src={logement?.host?.picture} alt="host's face" />
+  //         </div>
+  //       </div>
+  //     </div>
+  //     <div>
+  //       <div>
+  //         <Tag logement={logement} />
+  //       </div>
+  //     </div>
+  //     <Toggle logement={logement} />
+  //   </div>
+  // );
 };
 
 export default Logement;
