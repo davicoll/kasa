@@ -2,20 +2,19 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 25px;
 }
 .loge-title-cont {
   display: flex;
   flex-direction: column;
-
-  flex: 1;
 }
 .loge-title-text {
   font-family: "montserrat";
   font-weight: 500;
   color: #ff6060;
-  max-width: 55%;
+  max-width: 70%;
 }
 .loge-title-text p {
   margin: 0px 0px 20px 0px;
@@ -32,7 +31,6 @@
 .tags-cont {
   display: flex;
   flex-direction: row;
-  flex: 1;
   gap: 1%;
 }
 
@@ -45,4 +43,32 @@
   border-radius: 10px;
   padding: 5px 20px;
   text-align: center;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 780px) {
+  .loge-info-cont {
+    flex-wrap: wrap;
+  }
+  .container {
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    max-height: 65px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .loge-title-text {
+    min-width: 100%;
+  }
+  .s {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .loge-host-info {
+    justify-content: flex-end;
+  }
+  .rating {
+    margin-top: 20px;
+  }
 }
