@@ -1,23 +1,21 @@
-.toggle-cont {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 2%;
-  flex-wrap: wrap;
-}
 .toggle {
   display: flex;
   flex-direction: column;
 }
 .s {
+  display: flex;
+  flex-direction: column;
   width: 48%;
+  font-size: 18px;
+}
+.l {
+  font-size: 24px;
 }
 
 .toggle-title {
   background-color: #ff6060;
   color: white;
   font-weight: 500;
-  font-size: 18px;
   border-radius: 10px;
   display: flex;
   flex-direction: row;
@@ -29,6 +27,7 @@
 .toggle-title p {
   margin: 0px;
   padding: 10px 0px 10px 20px;
+  font-size: inherit;
 }
 .toggle-arrow-cont {
   margin-right: 20px;
@@ -53,26 +52,19 @@
 .toggle-textbox {
   position: relative;
   background-color: #f7f7f7;
-  height: 100%;
   border-radius: 0px 0px 10px 10px;
   margin-top: -7px;
   z-index: 1;
 }
 .toggle-text {
   color: #ff6060;
-  font-size: 18px;
+  font-size: inherit;
   font-weight: 400;
   text-align: justify;
   padding: 5px 20px 5px 20px;
 }
 .list {
   list-style: none;
-}
-.large {
-  font-size: 24px;
-}
-.l {
-  width: 100%;
 }
 
 @media (max-width: 600px) {

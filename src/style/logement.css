@@ -44,12 +44,21 @@
   padding: 5px 20px;
   text-align: center;
 }
+.loge-toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2%;
+  flex-wrap: wrap;
+  animation: appear 1.5s;
+}
 
 /*RESPONSIVE*/
 
 @media (max-width: 780px) {
   .loge-info-cont {
     flex-wrap: wrap;
+    margin-bottom: 20px;
   }
   .container {
     flex-direction: column;
@@ -73,10 +82,15 @@
   }
 }
 @media (max-width: 600px) {
+  .loge-info-cont {
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
   .loge-title-text h2 {
     font-size: 21px;
   }
   .loge-title-text p {
+    margin-bottom: 10px;
     font-size: 12px;
   }
   .tags {

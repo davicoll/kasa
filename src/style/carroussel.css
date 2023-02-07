@@ -26,6 +26,7 @@
   -webkit-transform: rotate(135deg);
   left: 2%;
 }
+
 .right {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);

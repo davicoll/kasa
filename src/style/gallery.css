@@ -8,6 +8,7 @@
   row-gap: 30%; /*FIX THIS*/
   background-color: #f6f6f6;
   border-radius: 10px;
+  animation: appear 1.5s;
 }
 
 .card-link {

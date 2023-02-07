@@ -1,6 +1,6 @@
 import { IoStarSharp } from "react-icons/io5";
-import "../style/tag.css";
-const Tag = ({ logement }) => {
+import "../style/host.css";
+const Host = ({ logement }) => {
   const range = [1, 2, 3, 4, 5];
 
   return (
@@ -25,4 +25,4 @@ const Tag = ({ logement }) => {
   );
 };
 
-export default Tag;
+export default Host;

@@ -5,21 +5,21 @@ import "../style/header.css";
 
 const Header = () => {
   return (
-    <div className="parent">
+    <header className="parent">
       <div className="header-cont">
         <div>
           <img src={logo} alt="logo kasa" />
         </div>
-        <div className="header-nav">
+        <nav className="header-nav">
           <Link to="/" className="header-link">
             <h3>Accueil</h3>
           </Link>
           <Link to="/apropos" className="header-link">
             <h3>A Propos</h3>
           </Link>
-        </div>
+        </nav>
       </div>
-    </div>
+    </header>
   );
 };
 
