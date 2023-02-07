@@ -13,10 +13,33 @@
 .error-text {
   font-size: 36px;
   font-weight: 500;
+  margin-bottom: 200px;
 }
 a {
   color: inherit;
   text-decoration: underline;
   font-size: 18px;
   font-weight: 500;
+}
+@media (max-width: 900px) {
+  .error-num {
+    font-size: 150px;
+  }
+  .error-text {
+    font-size: 24px;
+    margin-bottom: 150px;
+  }
+}
+@media (max-width: 750px) {
+  .error-num {
+    font-size: 100px;
+    margin-top: 50px;
+  }
+  .error-text {
+    font-size: 18px;
+    margin-bottom: 150px;
+  }
+  a {
+    font-size: 14px;
+  }
 }

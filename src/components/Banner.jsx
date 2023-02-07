@@ -1,13 +1,27 @@
 import "../style/banner.css";
 
-const Banner = ({ page, title }) => {
+const Banner = ({ page, title, tall }) => {
   return (
-    <div className="banner-cont">
-      <div className="banner-grey"></div>
-      <img src={page} alt="paysage de motagne" className="banner-img" />
-      {title ? (
-        <h1 className="banner-title">Chez vous, partout et ailleurs</h1>
-      ) : null}
+    <div>
+      <div className="banner-cont">
+        {tall ? (
+          <div className="banner-grey tall"></div>
+        ) : (
+          <div className="banner-grey"></div>
+        )}
+        {tall ? (
+          <img
+            src={page}
+            alt="paysage de motagne"
+            className="banner-img tall"
+          />
+        ) : (
+          <img src={page} alt="paysage de motagne" className="banner-img " />
+        )}
+        {title ? (
+          <h1 className="banner-title">Chez vous, partout et ailleurs</h1>
+        ) : null}
+      </div>
     </div>
   );
 };

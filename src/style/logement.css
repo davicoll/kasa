@@ -72,3 +72,34 @@
     margin-top: 20px;
   }
 }
+@media (max-width: 600px) {
+  .loge-title-text h2 {
+    font-size: 21px;
+  }
+  .loge-title-text p {
+    font-size: 12px;
+  }
+  .tags {
+    font-size: 10px;
+    padding: 3px 15px;
+    margin-bottom: 3px;
+  }
+  .tags-cont {
+    flex-wrap: wrap;
+  }
+  .loge-host-name {
+    font-size: 14px;
+  }
+  .loge-host-photo img {
+    height: 35px;
+    width: 35px;
+  }
+  .rating {
+    font-size: 16px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+  .container {
+    margin-top: 10px;
+  }
+}

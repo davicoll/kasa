@@ -1,7 +1,6 @@
 .banner-cont {
   position: relative;
   width: 100%;
-  height: 200px;
   margin-bottom: 40px;
 }
 .banner-grey {
@@ -18,6 +17,7 @@
   object-fit: cover;
   border-radius: 25px;
 }
+
 .banner-title {
   position: absolute;
   z-index: 10;
@@ -36,44 +36,50 @@
 }
 
 @media (max-width: 950px) {
-  .banner-cont {
+  .banner-grey {
     height: 150px;
   }
-  .banner-grey {
-    height: inherit;
-  }
   .banner-img {
-    height: inherit;
+    height: 150px;
   }
   .banner-title {
     top: 25px;
     left: 15%;
     font-size: 36px;
   }
+  .tall {
+    height: 223px;
+  }
 }
 @media (max-width: 850px) {
   .banner-title {
     left: 10%;
   }
+  .banner-cont {
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 760px) {
-  .banner-cont {
+  .banner-grey {
     height: 110px;
   }
-  .banner-grey {
-    height: inherit;
-  }
   .banner-img {
-    height: inherit;
+    height: 110px;
   }
   .banner-title {
     left: 5%;
     font-size: 24px;
     text-align: start;
   }
+  .tall {
+    height: 223px;
+  }
 }
 @media (max-width: 510px) {
   .banner-title {
-    top: 10px;
+    top: 18px;
+  }
+  .banner-cont {
+    margin-bottom: 10px;
   }
 }

@@ -12,13 +12,14 @@
 .loge-host-name {
   font-weight: 500;
   color: #ff6060;
-  font-size: 24px;
+  font-size: 22px;
   max-width: 120px;
   text-align: center;
 }
 .loge-host-photo img {
   object-fit: cover;
   width: 64px;
+  height: 64px;
   border-radius: 50%;
 }
 .rating {

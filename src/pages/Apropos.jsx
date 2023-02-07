@@ -5,7 +5,7 @@ import ToggleLage from "../components/ToggleLage";
 const Apropos = () => {
   return (
     <div>
-      <Banner page={apropos} />
+      <Banner page={apropos} tall={true} />
       <ToggleLage />
     </div>
   );
