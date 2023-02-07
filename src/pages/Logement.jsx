@@ -9,18 +9,12 @@ const Logement = ({ logements }) => {
   const [logement, setLogement] = useState([]);
   const myUrl = useParams();
 
-  const tags = logement.tags;
-
   useEffect(() => {
     const logementOne = logements.find((logement) => logement.id === myUrl.id);
-    const displayLoge = async () => {
-      const logementFound = await logementOne;
-
-      setLogement(logementFound);
-    };
-    displayLoge();
+    setLogement(logementOne);
   }, []);
 
+  const tags = logement.tags;
   const description = logement.description;
 
   return (
