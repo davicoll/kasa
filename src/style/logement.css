@@ -5,6 +5,7 @@
   justify-content: space-between;
   margin-top: 20px;
   margin-bottom: 25px;
+  animation: appear 1s;
 }
 .loge-title-cont {
   display: flex;

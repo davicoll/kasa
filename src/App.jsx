@@ -44,7 +44,7 @@ function App() {
         <Route path="/apropos" element={<Apropos />} />
         <Route
           exact
-          path="/logement/:id"
+          path="logement/:id"
           element={<Logement logements={logements} />}
         />
         <Route path="*" element={<Error />} />

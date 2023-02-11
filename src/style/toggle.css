@@ -10,6 +10,7 @@
 }
 .l {
   font-size: 24px;
+  animation: appear 0.7s;
 }
 
 .toggle-title {
@@ -32,6 +33,7 @@
 .toggle-arrow-cont {
   margin-right: 20px;
   align-items: center;
+  user-select: none;
 }
 .toggle-arrow {
   border: solid white;
@@ -62,6 +64,7 @@
   font-weight: 400;
   text-align: justify;
   padding: 5px 20px 5px 20px;
+  animation: appear 0.5s;
 }
 .list {
   list-style: none;

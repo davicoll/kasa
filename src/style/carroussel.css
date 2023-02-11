@@ -5,6 +5,7 @@
   height: 400px;
   border-radius: 25px;
   z-index: 1;
+  animation: appear 0.7s;
 }
 .carroussel-img {
   width: 100%;

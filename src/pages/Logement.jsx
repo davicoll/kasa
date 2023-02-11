@@ -14,6 +14,10 @@ const Logement = ({ logements }) => {
     setLogement(logementOne);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const tags = logement.tags;
   const description = logement.description;
 
