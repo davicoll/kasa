@@ -1,23 +1,40 @@
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import Card from "./Card";
 import "../style/gallery.css";
 
-const Gallery = ({ logements }) => {
+const Gallery = () => {
+  //logements state
+  const [logements, setLogements] = useState([]);
+
+  //Setstate logements
+  useEffect(() => {
+    const getLogements = async () => {
+      const logementsFromServer = await fetchLoges();
+      setLogements(logementsFromServer);
+    };
+
+    getLogements();
+  }, []);
+
+  //Fetch all logements
+  const fetchLoges = async () => {
+    const res = await fetch("data.json", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await res.json();
+
+    return data;
+  };
+
   return (
     <div>
       <div className="gallery-cont">
         {logements.map((logement) => (
           <div key={logement.id} className="card-cont">
-            <div>
-              <Link className="card-link" to={`/logement/${logement.id}`}>
-                <img
-                  className="card-img"
-                  src={logement.cover}
-                  alt="interieur de ce logement"
-                />
-                <div className="color-overlay"></div>
-                <p>{logement.title}</p>
-              </Link>
-            </div>
+            <Card logement={logement} />
           </div>
         ))}
       </div>

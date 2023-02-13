@@ -5,14 +5,37 @@ import Carroussel from "../components/Carroussel";
 import Host from "../components/Host";
 import "../style/logement.css";
 
-const Logement = ({ logements }) => {
+const Logement = () => {
+  //One logement state
   const [logement, setLogement] = useState([]);
+  //recover url id
   const myUrl = useParams();
 
+  //Set one logement state
   useEffect(() => {
-    const logementOne = logements.find((logement) => logement.id === myUrl.id);
-    setLogement(logementOne);
+    const getLogements = async () => {
+      const logementsFromServer = await fetchLoges();
+      const logementOne = logementsFromServer.find(
+        (logement) => logement.id === myUrl.id
+      );
+      setLogement(logementOne);
+    };
+
+    getLogements();
   }, []);
+
+  //Fetch all logements
+  const fetchLoges = async () => {
+    const res = await fetch("http://localhost:3000/data.json", {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await res.json();
+
+    return data;
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);

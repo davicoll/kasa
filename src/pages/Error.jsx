@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../style/error.css";
 
-const Error = (props) => {
+const Error = (hasError) => {
   return (
     <div className="error-cont">
       <p className="error-num">404</p>
