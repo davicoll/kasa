@@ -1,6 +1,7 @@
 .toggle {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 .s {
   display: flex;
@@ -41,6 +42,9 @@
   display: inline-block;
   padding: 5px;
 }
+.toggle-arrow:hover {
+  cursor: pointer;
+}
 
 .down {
   transform: rotate(45deg);
@@ -71,6 +75,9 @@
 }
 
 @media (max-width: 600px) {
+  .toggle {
+    margin-bottom: 10px;
+  }
   .toggle-text {
     font-size: 12px;
     padding: 3px 13px 3px 13px;

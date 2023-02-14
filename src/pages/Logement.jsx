@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Toggle from "../components/Toggle";
 import Carroussel from "../components/Carroussel";
 import Host from "../components/Host";
+import Error from "./Error";
 import "../style/logement.css";
 
 const Logement = () => {
@@ -41,41 +42,44 @@ const Logement = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const tags = logement.tags;
-  const description = logement.description;
-
   return (
-    <div key={logement.id}>
-      <Carroussel logement={logement} />
-      <div className="loge-info-cont">
-        <div className="loge-title-cont">
-          <div className="loge-title-text">
-            <h2>{logement.title}</h2>
-            <p>{logement.location}</p>
+    <div>
+      {!logement ? (
+        <Error />
+      ) : (
+        <div key={logement.id}>
+          <Carroussel logement={logement} />
+          <div className="loge-info-cont">
+            <div className="loge-title-cont">
+              <div className="loge-title-text">
+                <h2>{logement.title}</h2>
+                <p>{logement.location}</p>
+              </div>
+              <div className="tags-cont">
+                {logement?.tags &&
+                  logement?.tags.map((tag, i) => (
+                    <div className="tags" key={i}>
+                      {tag}
+                    </div>
+                  ))}
+              </div>
+            </div>
+            <Host logement={logement} />
           </div>
-          <div className="tags-cont">
-            {tags &&
-              tags.map((tag, i) => (
-                <div className="tags" key={i}>
-                  {tag}
-                </div>
-              ))}
+          <div className="loge-toggle">
+            <div className="s">
+              <Toggle
+                logement={logement}
+                title="Description"
+                toggleText={logement?.description}
+              />
+            </div>
+            <div className="s">
+              <Toggle logement={logement} title="Équipements" list={true} />
+            </div>
           </div>
         </div>
-        <Host logement={logement} />
-      </div>
-      <div className="loge-toggle">
-        <div className="s">
-          <Toggle
-            logement={logement}
-            title="Description"
-            toggleText={description}
-          />
-        </div>
-        <div className="s">
-          <Toggle logement={logement} title="Équipements" list={true} />
-        </div>
-      </div>
+      )}
     </div>
   );
 };

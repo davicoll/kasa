@@ -28,6 +28,9 @@ h3 {
   font-weight: 500;
   text-decoration: none;
 }
+.underline {
+  text-decoration: underline;
+}
 @media (max-width: 750px) {
   .parent {
     margin-bottom: 20px;
