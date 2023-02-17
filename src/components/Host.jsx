@@ -1,4 +1,3 @@
-//import { IoStarSharp } from "react-icons/io5";
 import "../style/host.css";
 const Host = ({ logement }) => {
   const range = [1, 2, 3, 4, 5];
@@ -19,7 +18,7 @@ const Host = ({ logement }) => {
               <i key={n} className="orange fa-solid fa-star" />
             </div>
           ) : (
-            <div key={n} className="grey fa-solid fa-star"></div>
+            <i key={n} className="grey fa-solid fa-star" />
           )
         )}
       </div>
