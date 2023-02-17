@@ -1,4 +1,4 @@
-import { IoStarSharp } from "react-icons/io5";
+//import { IoStarSharp } from "react-icons/io5";
 import "../style/host.css";
 const Host = ({ logement }) => {
   const range = [1, 2, 3, 4, 5];
@@ -15,9 +15,11 @@ const Host = ({ logement }) => {
       <div className="rating">
         {range.map((n) =>
           logement && n <= logement.rating ? (
-            <IoStarSharp key={n} className="orange" />
+            <div>
+              <i key={n} className="orange fa-solid fa-star" />
+            </div>
           ) : (
-            <IoStarSharp key={n} className="grey" />
+            <div key={n} className="grey fa-solid fa-star"></div>
           )
         )}
       </div>
