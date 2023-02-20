@@ -14,9 +14,7 @@ const Host = ({ logement }) => {
       <div className="rating">
         {range.map((n) =>
           logement && n <= logement.rating ? (
-            <div>
-              <i key={n} className="orange fa-solid fa-star" />
-            </div>
+            <i key={n} className="orange fa-solid fa-star" />
           ) : (
             <i key={n} className="grey fa-solid fa-star" />
           )
